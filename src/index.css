@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --color-primary-100: #7b04f8;
+    --color-primary-200: #6f04df;
+    --color-primary-300: #6203c6;
+    --color-primary-400: #5603ad;
+    --color-primary-500: #4a0394;
+    --color-primary-600: #3d027b;
+    --color-primary-700: #310262;
+}
+
+.dark {}
+
+
+body {
+    @apply w-screen min-h-screen bg-neutral-100 dark:bg-neutral-900 text-blue-gray-900 dark:text-blue-gray-50;
+}
+
+.link-tag {
+    @apply mx-2 px-4 py-2 rounded-t-xl hover:ring-2 hover:ring-blue-400 hover:text-primary-200 transition-all ease-linear duration-500;
+}
+
+.active-link {
+    @apply bg-primary-400 text-neutral-100 hover:bg-transparent;
+}
+
+.input-primary{
+    @apply text-primary-700 focus:font-medium focus:!border-primary-300 tracking-wide placeholder:opacity-0 focus:placeholder:opacity-100;
+}
+
+.input-label{
+    @apply peer-focus:before:!content-none peer-focus:after:!content-none peer-focus:hidden !text-primary-700;
+}
+
+.btn-primary{
+    @apply text-lg py-1 rounded-xl normal-case tracking-wide w-1/3;
+}
